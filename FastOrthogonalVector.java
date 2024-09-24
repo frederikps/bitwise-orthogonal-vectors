@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class OrthogonalVector {
+public class FastOrthogonalVector {
 
     static final int M = 256;
 
@@ -43,13 +43,13 @@ public class OrthogonalVector {
             for (int j = i + 1; j < n; j++) {
                 if (is_orthogonal(A[i], A[j])) {
 //                  System.out.println("yes");
-        	    System.out.println("Search took " + (System.nanoTime() - t) / 1e6 + " ms." );
+        	    System.out.print("" + (System.nanoTime() - t) / 1e6);
                     System.exit(0);
                 }
             }
         }
 
-        System.out.println("Search took " + (System.nanoTime() - t) / 1e6 + " ms." );
+        System.out.print("" + (System.nanoTime() - t) / 1e6);
 
 
 //      System.out.println("no");

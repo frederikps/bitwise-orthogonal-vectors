@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class OrthogonalVector {
+public class SlowOrthogonalVector {
 
     static final int M = 256;
 
@@ -44,13 +44,13 @@ public class OrthogonalVector {
             for (int j = i + 1; j < A.size(); j++) {
                 if (is_orthogonal(A.get(i), A.get(j))) {
 //                  System.out.println("yes");
-        	    System.out.println("Search took " + (System.nanoTime() - t) / 1e6 + " ms." );
+        	    System.out.println("" + (System.nanoTime() - t) / 1e6);
                     System.exit(0);
                 }
             }
         }
 
-        System.out.println("Search took " + (System.nanoTime() - t) / 1e6 + " ms." );
+        System.out.println("" + (System.nanoTime() - t) / 1e6);
 
 
 //      System.out.println("no");
