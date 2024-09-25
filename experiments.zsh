@@ -1,5 +1,5 @@
 lw=('FastOrthogonalVector' 'SlowOrthogonalVector')
-
+echo "Algorithm,Input,Time"
 for i in $lw; do
 	
 	for j in {1..30}; do

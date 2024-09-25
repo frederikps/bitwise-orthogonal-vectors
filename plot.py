@@ -7,14 +7,15 @@ fig, ax = plt.subplots()
 
 for a,c in zip(df['Algorithm'].unique(), ["green","blue"]):
     af = df.copy().loc[df['Algorithm'] == a].groupby(['Algorithm','Input']).median().reset_index()
-    ax.plot(af['Input'],af['Time'],'ro',color=c)
+    ax.plot(af['Input'],af['Time'],color=c)
 
 ax.set(xlabel='input', ylabel='time',
-#        title='About as simple as it gets, folks'
+#        title=''
 )
 ax.grid()
 
 fig.savefig("test.pdf")
-plt.show()
+fig.savefig("test.png")
+# plt.show()
 
 
